@@ -1,0 +1,9 @@
+#!/bin/bash
+
+extra_args=""
+if [ "x$TRAVIS_JDK_VERSION" == "xoraclejdk8" ]; then
+	echo "Enabling Jacoco"
+	extra_args="jacoco:report org.eluder.coveralls:coveralls-maven-plugin:report"
+fi
+
+mvn -B -V verify $extra_args

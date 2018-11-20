@@ -1,0 +1,22 @@
+language: java
+cache:
+  directories:
+  - '$HOME/.m2'
+jobs:
+  include:
+    - stage: test
+      name: Linux + Oracle JDK 8
+      os: linux
+      dist: trusty
+      sudo: required
+      jdk: oraclejdk8
+      install: true
+      script: dev/main
+    - stage: test
+      name: Linux + Oracle JDK 11
+      os: linux
+      dist: trusty
+      sudo: required
+      jdk: oraclejdk11
+      install: true
+      script: dev/main
