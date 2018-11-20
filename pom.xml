@@ -9,6 +9,11 @@
 
     <name>Foo</name>
 
+    <properties>
+        <compileSource>1.8</compileSource>
+        <compileTarget>1.8</compileTarget>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
