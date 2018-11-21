@@ -106,7 +106,7 @@
                         <configuration>
                             <argLine>
                                 @{surefireArgLine}
-                                ${jdkArgs}
+                                @{jdkArgs}
                             </argLine>
                         </configuration>
                     </plugin>
