@@ -59,7 +59,7 @@
         <profile>
             <id>java9plus</id>
             <activation>
-                <jdk>18.9</jdk>
+                <jdk>[9,18]</jdk>
             </activation>
             <properties>
                 <jdkArgs>
