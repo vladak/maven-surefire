@@ -63,7 +63,7 @@
             </activation>
             <properties>
                 <jdkArgs>
-                    --illegal-access=permit
+                    -Xmx1g
                 </jdkArgs>
             </properties>
         </profile>
