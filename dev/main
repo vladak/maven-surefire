@@ -1,9 +1,3 @@
 #!/bin/bash
 
-extra_args=""
-if [ "x$TRAVIS_JDK_VERSION" == "xoraclejdk8" ]; then
-	echo "Enabling Jacoco"
-	extra_args="-Pjacoco"
-fi
-
-mvn -B -V verify $extra_args
+mvn -B -V verify -Pjacoco
