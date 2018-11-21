@@ -73,6 +73,11 @@
 
         <profile>
             <id>jacoco</id>
+            <activation>
+                <property>
+                    <name>jacoco</name>
+                </property>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
