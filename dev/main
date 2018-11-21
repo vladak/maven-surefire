@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mvn help:active-profiles
-# mvn -B -V verify -Djacoco -X
+# mvn help:active-profiles
+mvn -B -V verify -Djacoco -X
