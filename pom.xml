@@ -88,7 +88,7 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
-                            <argLine>@{surefireArgLine}</argLine>
+                            <argLine>@{surefireArgLine} @{jdkArgs}</argLine>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -100,23 +100,14 @@
             <activation>
                 <jdk>[9,11]</jdk>
             </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <argLine>
-                                @{surefireArgLine}
-                                --illegal-access=permit
-                                --add-exports java.base/jdk.internal.ref=ALL-UNNAMED
-                                --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
-                                --add-exports java.base/sun.nio.ch=ALL-UNNAMED
-                            </argLine>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
+            <properties>
+                <jdkArgs>
+                    --illegal-access=permit
+                    --add-exports java.base/jdk.internal.ref=ALL-UNNAMED
+                    --add-exports java.base/jdk.internal.misc=ALL-UNNAMED
+                    --add-exports java.base/sun.nio.ch=ALL-UNNAMED
+                </jdkArgs>
+            </properties>
         </profile>
     </profiles>
 
