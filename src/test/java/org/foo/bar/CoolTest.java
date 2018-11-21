@@ -8,7 +8,7 @@ public class CoolTest {
     @Test
     public void testFactor() {
         Cool c = new Cool();
-        c.setFactor(1);
-        assertEquals(1, c.getFactor());
+        c.setFactor(42);
+        assertEquals(42, c.getFactor());
     }
 }
